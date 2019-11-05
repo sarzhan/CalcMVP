@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.MainActivity">
+
+    <data>
+        <variable
+            name="event"
+            type="yuri.lechshnko.com.mye.presentation.MainContract.Presenter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/inputText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="right"
+            android:padding="30dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/resultText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="right"
+            android:padding="30dp"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputText" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultText">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonDeleteAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/ce"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/ce)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonBrackets"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/brackets"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/brackets)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonPercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/percent"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/percent)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonDivision"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/div"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/div)}"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_7"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/_7)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_8"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/_8)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_9"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/_9)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonMult"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/x"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/x)}"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_4"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/_4)}"/>
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_5"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/_5)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_6"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/_6)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonSubtraction"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/sub"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/sub)}"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_1"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/_1)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_2"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/_2)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_3"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/_3)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonSum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/plus"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/plus)}"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/dot"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/dot)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_0"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/_0)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/c"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/c)}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonEqual"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/equal"
+                    android:textSize="24sp"
+                    android:onClick="@{() -> event.eventOperation(@string/equal)}"/>
+            </TableRow>
+
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
