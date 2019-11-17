@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".presentation.MainActivity">
+    tools:context="com.example.com.calcmvp.presentation.main.MainActivity">
 
-    <data>
-        <variable
-            name="event"
-            type="yuri.lechshnko.com.mye.presentation.MainContract.Presenter" />
-    </data>
+<data>
+    <variable
+        name="event"
+        type="com.example.com.calcmvp.presentation.main.MainContract.Presenter" />
+</data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
